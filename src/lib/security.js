@@ -1,0 +1,1 @@
+const roles={admin:["read","write","invite","deploy","audit"],engineer:["read","write","deploy"],support:["read","write"]};export function can(role,permission){return roles[role]?.includes(permission)??false}export function permissions(role){return roles[role]||[]}
