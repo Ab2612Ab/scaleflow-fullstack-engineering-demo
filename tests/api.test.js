@@ -1,0 +1,1 @@
+import {describe,it,expect} from"vitest";import{listCustomers}from"../src/lib/api";describe("customer API",()=>{it("filters and paginates customers",async()=>{const r=await listCustomers({query:"Atlas",page:1,limit:5});expect(r.items).toHaveLength(1);expect(r.items[0].name).toBe("Atlas Commerce");expect(r.nextPage).toBe(null)})})
