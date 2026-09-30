@@ -1,0 +1,1 @@
+export default function ErrorState({title="Something went wrong",message="The service could not complete this request.",onRetry}){return <div className="errorstate"><strong>{title}</strong><span>{message}</span>{onRetry&&<button onClick={onRetry}>Try again</button>}</div>}
